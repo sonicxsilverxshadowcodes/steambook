@@ -14,6 +14,16 @@ A **multimeter** is a tool that can measure several electrical quantities in one
 | **Current** | Amount of charge flowing per second | Amperes (A) | A or mA |
 | **Resistance** | Opposition to current | Ohms (Ω) | Ω (ohm symbol) |
 
+**Figure 5.1 – What a multimeter measures (Mermaid):** One tool, three quantities.
+
+```mermaid
+flowchart TD
+    M[" Multimeter "]
+    M --> V["Voltage V<br/>Volts"]
+    M --> I["Current I<br/>Amperes"]
+    M --> R["Resistance R<br/>Ohms"]
+```
+
 **Real-life link:** When a torch stops glowing, we can use a multimeter to check if the battery still has voltage. If the voltage is too low, we change the battery. We can also check if a resistor is roughly the right value by measuring its resistance.
 
 ---
@@ -28,6 +38,20 @@ To measure **voltage** we connect the multimeter **in parallel** with the part w
 
 **Never measure high AC mains voltage without an adult and proper training**—it can be dangerous.
 
+**Figure 5.2 – Measuring voltage: connect in parallel (Mermaid):** Meter across the two points; current path unchanged.
+
+```mermaid
+flowchart LR
+    subgraph CIRCUIT[" Circuit "]
+        B["Battery"] --> L["Load"]
+        L --> B
+    end
+    subgraph METER_V[" Meter in VOLTAGE mode "]
+        MV["Multimeter<br/>probes ACROSS<br/>battery or load"]
+    end
+    B <-.->|"parallel"| METER_V
+```
+
 ---
 
 ## How Do We Measure Current?
@@ -37,6 +61,17 @@ To measure **current**, the current must **flow through** the meter. So we **bre
 - Select **Current (A or mA)** on the dial. Start with a higher range (e.g. 200 mA) to avoid overloading the meter.
 - Open the circuit (e.g. disconnect one wire) and connect the meter in series: one probe to one side, the other probe to the other side, so the current path is through the meter.
 - For small circuits, use the **mA** (milliampere) range. Never connect the meter in current mode **across** a battery or power supply (in parallel)—that can blow a fuse or damage the meter.
+
+**Figure 5.3 – Measuring current: connect in series (Mermaid):** Break the circuit so all current flows through the meter.
+
+```mermaid
+flowchart LR
+    subgraph WITH_METER[" Circuit with meter in series "]
+        B["Battery"] --> MM["Multimeter<br/>in CURRENT mode<br/>I flows THROUGH"]
+        MM --> L["Load"]
+        L --> B
+    end
+```
 
 ---
 

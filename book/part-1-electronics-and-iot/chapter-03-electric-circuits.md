@@ -32,13 +32,23 @@ An **electric circuit** is a **complete, closed path** through which electricity
 
 ## Parts of a Simple Circuit
 
-**Figure 3.2 – Parts of a simple circuit (line diagram):** Battery → wire → load → wire → back to battery.
+**Figure 3.2 – Parts of a simple circuit (Mermaid):** A closed loop—power source, wires, and load.
 
-```
-    +  [Battery]  -         wire          [Bulb/LED]         wire
-    |============|  ---------------  |~~~~~~~~~~~~~|  ---------------
-         (1)              (2)              (3)                (2)
-    Power source      Path for current    Load            Path back
+```mermaid
+flowchart LR
+    subgraph PS["(1) Power source"]
+        BAT["🔋 Battery<br/>+ and −"]
+    end
+    subgraph W1["(2) Wire"]
+        WIRE1["━━ conductor ━━"]
+    end
+    subgraph LD["(3) Load"]
+        BULB["💡 Bulb / LED"]
+    end
+    subgraph W2["(2) Wire"]
+        WIRE2["━━ conductor ━━"]
+    end
+    BAT --> WIRE1 --> BULB --> WIRE2 --> BAT
 ```
 
 Every simple circuit has at least three types of parts:
@@ -125,7 +135,35 @@ Electricity is useful but can cause shock, burns, or fire. Following safety rule
 
 ---
 
-## One Level Higher: Series and Parallel Circuits
+**Flowchart 3.1 – Is it safe?** Quick check before touching or repairing.
+
+```mermaid
+flowchart TD
+    A[Working with electricity?] --> B[Water away?]
+    B --> C[Device unplugged?]
+    C --> D[Hands dry?]
+    D --> E[Correct adapter / voltage?]
+    E --> F[Yes to all?]
+    F -->|Yes| G[Safer to proceed with care]
+    F -->|No| H[Fix that first!]
+```
+
+**Figure 3.4 – Series vs parallel (Mermaid):** Same current path vs separate branches.
+
+```mermaid
+flowchart LR
+    subgraph SERIES[" Series: one path "]
+        S1["Battery"] --> S2["Bulb 1"] --> S3["Bulb 2"]
+        S3 -.->|"same I"| S1
+    end
+    subgraph PARALLEL[" Parallel: branches "]
+        P1["Battery"] --> P2["Bulb A"]
+        P1 --> P3["Bulb B"]
+        P2 --> P4["back"]
+        P3 --> P4
+        P4 --> P1
+    end
+```
 
 When we have more than one bulb or component, we can connect them in two main ways:
 

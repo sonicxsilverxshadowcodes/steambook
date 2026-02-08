@@ -120,12 +120,53 @@ Their work helped us understand why some materials conduct electricity (electron
 
 To go a bit deeper, we use three ideas that engineers and electricians use every day. They are linked by **Ohm’s Law**.
 
-**Figure 1.3 – The three quantities in a simple circuit:** Voltage pushes current through resistance.
+**Figure 1.3 – Simple circuit (Mermaid):** Voltage source pushes current through the circuit; resistance limits the flow.
 
+```mermaid
+flowchart LR
+    subgraph SOURCE[" Power source "]
+        direction TB
+        B["🔋 Battery<br/>Voltage V (Volts)<br/>'Push'"]
+    end
+    subgraph PATH[" Path "]
+        direction TB
+        W["━━ Wire ━━<br/>Current I (Amperes)<br/>Same I everywhere"]
+    end
+    subgraph LOAD[" Load "]
+        direction TB
+        R["⬡ Resistor / Bulb<br/>Resistance R (Ohms)<br/>'Opposition'"]
+    end
+    SOURCE -->|"I"| PATH -->|"I"| LOAD -->|"I"| SOURCE
 ```
-    +  Battery (Voltage V)   -     Wire (low resistance)     Bulb / Resistor (Resistance R)
-    |================|  ------>  Current I flows  ------>  |~~~~~~~~~~~~~~~|
-         "Push"                    (Amperes)                    "Opposition"
+
+**Figure 1.3b – Voltage–current–resistance relationship (Ohm’s Law):** How V, I, and R affect each other.
+
+```mermaid
+flowchart TD
+    subgraph OHM[" Ohm's Law: V = I × R "]
+        direction LR
+        V["V<br/>Voltage<br/>Volts"]
+        I["I<br/>Current<br/>Amperes"]
+        R["R<br/>Resistance<br/>Ohms"]
+    end
+    subgraph EFFECTS[" If we change one (others fixed): "]
+        E1["V ↑ → I ↑"]
+        E2["R ↑ → I ↓"]
+        E3["I ↑ or R ↑ → V ↑"]
+    end
+    OHM --> EFFECTS
+```
+
+**Figure 1.3c – Current vs voltage (qualitative):** For a fixed resistance R, more voltage means more current.
+
+```mermaid
+flowchart LR
+    subgraph FIXED_R[" Resistance R = constant "]
+        A["Low V"] -->|"→"| B["Low I"]
+        C["High V"] -->|"→"| D["High I"]
+    end
+    A -.->|"Same R"| C
+    B -.->|"Same R"| D
 ```
 
 ### Voltage (V)

@@ -6,6 +6,18 @@
 
 ## What Is a Resistor?
 
+**Figure 4.1 – Resistor in a circuit (Mermaid):** Resistor limits current between the battery and the load.
+
+```mermaid
+flowchart LR
+    subgraph CIRCUIT[" Simple circuit with resistor "]
+        B["🔋 Battery<br/>V"]
+        R["⬡ Resistor<br/>R Ω"]
+        L["💡 LED / Bulb"]
+        B -->|"I"| R -->|"I"| L --> B
+    end
+```
+
 A **resistor** is a component that **controls or limits** the flow of electric current in a circuit. Think of it like a narrow part of a water pipe: the pipe can carry water, but the narrow section slows the flow. A resistor does not stop current completely (unless its value is very high); it limits how much current flows so that other parts, like an LED, get only the safe amount they need.
 
 | Term | Meaning |
@@ -88,6 +100,16 @@ We can use **Ohm’s Law** to pick a resistor value. The LED has a **forward vol
 - R = V ÷ I = 7 ÷ 0.02 = **350 Ω**. We pick the nearest standard value (e.g. 330 Ω or 390 Ω).
 
 So the formula is: **Resistor ≈ (Battery voltage − LED voltage) ÷ Desired current**.
+
+**Flowchart 4.1 – Choosing a resistor for an LED (Mermaid):** Steps using Ohm's Law.
+
+```mermaid
+flowchart TD
+    A[Know: Battery V & desired I] --> B[LED forward voltage ~2V]
+    B --> C[V_resistor = V_battery − V_LED]
+    C --> D[R = V_resistor ÷ I]
+    D --> E[Pick nearest standard value<br/>e.g. 330 Ω or 390 Ω]
+```
 
 | Step | What we do |
 |------|------------|
