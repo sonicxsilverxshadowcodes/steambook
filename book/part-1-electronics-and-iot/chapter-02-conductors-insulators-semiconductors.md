@@ -6,6 +6,19 @@
 
 ## Why Don’t All Materials Behave the Same?
 
+**Figure 2.1 – How materials behave with electricity:** Three types—conductors, insulators, semiconductors.
+
+```mermaid
+flowchart LR
+    A[Material] --> B{Allows current?}
+    B -->|Easily| C[Conductor]
+    B -->|No / very little| D[Insulator]
+    B -->|Only under conditions| E[Semiconductor]
+    C --> F[Copper, Aluminium]
+    D --> G[Plastic, Rubber]
+    E --> H[Silicon]
+```
+
 Have you ever wondered why we use metal inside wires and plastic or rubber on the outside? Or why you get a shock when you touch a metal tap but not when you touch a wooden door? The reason is that **different materials allow electricity to pass through them differently**. Some let electrons flow easily; others block the flow; and some do both depending on conditions. Scientists divide materials into three main groups: **conductors**, **insulators**, and **semiconductors**.
 
 | Type | Allows electricity? | Examples (everyday) |
@@ -13,6 +26,18 @@ Have you ever wondered why we use metal inside wires and plastic or rubber on th
 | **Conductor** | Yes, easily | Metal wires, keys, coins, water (when impure) |
 | **Insulator** | No (or very little) | Plastic, rubber, wood, glass, dry air |
 | **Semiconductor** | Only under special conditions | Silicon (in chips, phones, solar panels) |
+
+**Figure 2.2 – Wire cross-section:** Conductor inside (carries current); insulator outside (safety).
+
+```
+    ============================================
+    |  Plastic / Rubber (INSULATOR - outside)  |
+    |  ======================================  |
+    |  |  Copper (CONDUCTOR - inside)      |  |
+    |  |     current flows here            |  |
+    |  ======================================  |
+    ============================================
+```
 
 **Real-life link:** The cord of a table lamp has metal (copper) inside to carry current and plastic or rubber on the outside so you can hold it safely. If the outside were metal too, you could get a shock!
 
@@ -109,6 +134,15 @@ In conductors, there are energy levels (bands) where electrons can move freely. 
 | Semiconductor | Small gap; electrons can jump with a little energy | Yes, under the right conditions |
 
 ---
+
+**Flowchart 2.1 – Choosing the right material:** Use this to decide conductor vs insulator vs semiconductor.
+
+```mermaid
+flowchart TD
+    A[Need to carry current?] -->|Yes, in a wire or path| B[Use CONDUCTOR - e.g. copper]
+    A -->|No, need to block or protect?| C[Use INSULATOR - e.g. plastic]
+    A -->|Need to control when it conducts?| D[Use SEMICONDUCTOR - e.g. silicon]
+```
 
 ## Quick Comparison Table
 

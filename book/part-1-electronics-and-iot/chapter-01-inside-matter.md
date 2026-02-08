@@ -6,6 +6,15 @@
 
 ## What Is Everything Made Of?
 
+**Figure 1.1 – From matter to atoms:** Everything we see and touch is made of matter; matter is made of atoms.
+
+```mermaid
+flowchart LR
+    A[Everything around us] --> B[Matter]
+    B --> C[Atoms]
+    C --> D[Protons, Electrons, Neutrons]
+```
+
 Look around you. Your desk, your pencil, the wire of a charger, the screen you are reading on—even your own hands—are all made of the same kind of tiny building blocks. Scientists call these building blocks **atoms**. Just as a wall is made of many bricks, everything in the world is made of many, many atoms. They are so small that you cannot see them with your eyes; you need very powerful microscopes to “see” them. A single drop of water has more atoms in it than there are people on Earth!
 
 | Idea | Simple explanation |
@@ -19,6 +28,23 @@ Look around you. Your desk, your pencil, the wire of a charger, the screen you a
 ---
 
 ## Inside an Atom
+
+**Figure 1.2 – Structure of an atom (simplified):** The nucleus has protons and neutrons; electrons move around it.
+
+```
+                    electrons (negative)
+                         •
+                    •         •
+                         •
+              +++++++++++++++++++
+              +  NUCLEUS        +
+              +  protons (+)    +
+              +  neutrons (0)   +
+              +++++++++++++++++++
+                         •
+                    •         •
+                         •
+```
 
 An atom is like a tiny solar system. In the centre there is a **nucleus** (like the Sun), and around it there are even smaller particles. The three main parts you need to know are:
 
@@ -36,6 +62,16 @@ An atom is like a tiny solar system. In the centre there is a **nucleus** (like 
 
 ## What Is Electricity?
 
+**Flowchart 1.1 – When do we have electricity?** Electricity needs a closed path and moving electrons.
+
+```mermaid
+flowchart TD
+    A[Is there a complete path for electrons?] -->|No - open circuit| B[No current. No electricity.]
+    A -->|Yes - closed circuit| C[Is there a voltage push?]
+    C -->|No| B
+    C -->|Yes| D[Electrons flow. We have electric current!]
+```
+
 Electricity is **not** a thing you can hold. It is the **flow of electrons** from one place to another. If electrons do not move, there is no electric current—even if the wire is full of electrons. Think of a pipe full of water: water only “does work” when it *flows*. Similarly, electrons only give us light, sound, or motion when they *flow*.
 
 | Term | Meaning |
@@ -43,6 +79,21 @@ Electricity is **not** a thing you can hold. It is the **flow of electrons** fro
 | Electricity (in everyday use) | The flow of electrons in a path (e.g. a wire). |
 | Electric current | The amount of charge (electrons) passing a point per second; measured in Amperes (A). |
 | No flow | If the path is broken (open circuit), electrons cannot flow, so there is no electricity. |
+
+**Figure 1.5 – Simple circuit (closed vs open):** When the path is complete, current flows; when it is broken, current stops.
+
+```
+  CLOSED CIRCUIT (current flows)          OPEN CIRCUIT (no current)
+  --------------------------------        -------------------------------
+       +  [Battery]  -                          +  [Battery]  -
+       |      |      |                          |      |      |
+       +------+------+                          +      X      -
+       |   Wire     |                          |   (break)   |
+       +------+------+                          +-------------+
+       |   Bulb     |                                 
+       +------+------+                          Bulb does NOT glow
+       Electrons flow → Bulb glows
+```
 
 **Real-life examples:**
 
@@ -65,9 +116,17 @@ Their work helped us understand why some materials conduct electricity (electron
 
 ---
 
-## One Level Higher: Voltage, Current, and Ohm’s Law
+## One Level Higher: Voltage, Current, Resistance, and Ohm’s Law
 
-To go a bit deeper, we use three ideas that engineers and electricians use every day.
+To go a bit deeper, we use three ideas that engineers and electricians use every day. They are linked by **Ohm’s Law**.
+
+**Figure 1.3 – The three quantities in a simple circuit:** Voltage pushes current through resistance.
+
+```
+    +  Battery (Voltage V)   -     Wire (low resistance)     Bulb / Resistor (Resistance R)
+    |================|  ------>  Current I flows  ------>  |~~~~~~~~~~~~~~~|
+         "Push"                    (Amperes)                    "Opposition"
+```
 
 ### Voltage (V)
 
@@ -90,23 +149,102 @@ To go a bit deeper, we use three ideas that engineers and electricians use every
 - A small LED might need only 0.02 A (20 milliamps).
 - A bulb might use 0.5 A. More current usually means more brightness or more power, but too much can damage parts (like an LED) or cause heating.
 
-### Resistance (R)
+### Resistance (R) – What Are Ohms?
 
-**Resistance** is how much the material “holds back” the flow of electrons. It is measured in **Ohms (Ω)**. Wires have low resistance; resistors are components that add controlled resistance to protect parts like LEDs.
+**Resistance** is how much the material “holds back” the flow of electrons. The unit of resistance is the **Ohm**, written as **Ω** (the Greek letter omega). One **ohm (1 Ω)** means: when we apply **1 volt** across that thing, **1 ampere** of current will flow through it. So:
 
-### Ohm’s Law
+- **Ohm** = unit of resistance.
+- **More ohms** = more opposition to current = less current for the same voltage.
+- **Fewer ohms** = less opposition = more current for the same voltage.
 
-A scientist named **Georg Simon Ohm** (1789–1854) found a simple relationship:
+Wires have very **low** resistance (a fraction of an ohm over short lengths). Resistors are components that add a **controlled** resistance (e.g. 100 Ω, 330 Ω, 1 kΩ) to limit current and protect parts like LEDs.
 
-**Voltage = Current × Resistance**
+| Resistance | Meaning (rough idea) |
+|------------|-----------------------|
+| 0 Ω (wire) | No opposition; current flows easily (limited by the rest of the circuit). |
+| 330 Ω | Moderate opposition; often used with LEDs on a 5 V or 9 V supply. |
+| 10 kΩ | High opposition; only a small current flows for the same voltage. |
 
+### Ohm’s Law – The Three Forms
+
+A scientist named **Georg Simon Ohm** (1789–1854) found that voltage, current, and resistance are related in a simple way:
+
+**Voltage = Current × Resistance**  
 \[ V = I \times R \]
 
-- **V** = voltage (Volts)  
-- **I** = current (Amperes)  
-- **R** = resistance (Ohms)
+From this one equation we can find **any one** of the three if we know the other two:
 
-So: if voltage goes up and resistance stays the same, current goes up. If we add more resistance (e.g. a bigger resistor), current goes down. That is why we put a resistor with an LED—to limit current so the LED does not burn out.
+| To find | Formula | In words |
+|---------|---------|----------|
+| **Voltage (V)** | \( V = I \times R \) | Multiply current by resistance. |
+| **Current (I)** | \( I = \frac{V}{R} \) or I = V ÷ R | Divide voltage by resistance. |
+| **Resistance (R)** | \( R = \frac{V}{I} \) or R = V ÷ I | Divide voltage by current. |
+
+**Figure 1.4 – Ohm’s Law triangle:** Cover the quantity you want to find; the remaining two show the operation.  
+- Cover **V** → I and R are side by side → **V = I × R**  
+- Cover **I** → V is over R → **I = V ÷ R**  
+- Cover **R** → V is over I → **R = V ÷ I**
+
+```
+        V
+       /|\
+      / | \
+     /  |  \
+    I --+-- R
+        |
+   V = I × R   |   I = V ÷ R   |   R = V ÷ I
+```
+
+### Worked Examples Using Ohm’s Law
+
+**Example 1 – Finding voltage (V)**  
+A current of 0.02 A (20 mA) flows through a resistor of 330 Ω. What is the voltage across the resistor?
+
+- **Formula:** V = I × R  
+- **V** = 0.02 × 330 = **6.6 V**  
+So the voltage across the resistor is **6.6 volts**.
+
+---
+
+**Example 2 – Finding resistance (R)**  
+A 9 V battery is connected to an LED. We want the current through the LED to be 0.02 A. The LED itself “uses” about 2 V. So the voltage across the resistor must be 9 − 2 = 7 V. What resistor value should we use?
+
+- **Formula:** R = V ÷ I  
+- **R** = 7 ÷ 0.02 = **350 Ω**  
+We pick the nearest standard value, e.g. **330 Ω** or **390 Ω**. So we need a resistor of about **330 Ω** to limit the current safely.
+
+---
+
+**Example 3 – Finding current (I)**  
+A 12 V battery is connected across a resistor of 600 Ω. How much current flows?
+
+- **Formula:** I = V ÷ R  
+- **I** = 12 ÷ 600 = **0.02 A** (or 20 mA).  
+So **0.02 amperes** (20 milliamps) of current flows.
+
+---
+
+**Example 4 – Another voltage calculation**  
+A 1.5 V cell is connected to a small bulb. The current is 0.3 A. What is the resistance of the bulb (approximately)?
+
+- **Formula:** R = V ÷ I  
+- **R** = 1.5 ÷ 0.3 = **5 Ω**  
+So the bulb has a resistance of about **5 ohms**.
+
+**Flowchart 1.2 – Using Ohm’s Law:** Decide what you need to find, then use the right formula.
+
+```mermaid
+flowchart TD
+    A[What do I need to find?] --> B{Quantity?}
+    B -->|Voltage V| C[Use V = I × R]
+    B -->|Current I| D[Use I = V ÷ R]
+    B -->|Resistance R| E[Use R = V ÷ I]
+    C --> F[Put in known values and calculate]
+    D --> F
+    E --> F
+```
+
+**Summary of the relationship:** If voltage goes up and resistance stays the same, current goes up. If we add more resistance (e.g. a bigger resistor), current goes down. That is why we put a resistor in series with an LED—to limit current so the LED does not burn out.
 
 ---
 
@@ -118,7 +256,9 @@ So: if voltage goes up and resistance stays the same, current goes up. If we add
 | Atom has protons, electrons, neutrons | Protons (+) and neutrons in nucleus; electrons (–) outside. |
 | Electricity = flow of electrons | No flow → no current → no “electricity” in the wire. |
 | Electrons carry negative charge | They are the particles that move in wires and circuits. |
-| Voltage, current, resistance | Voltage = push; current = flow; resistance = opposition. Ohm’s Law: V = I × R. |
+| Voltage (V), current (I), resistance (R) | Voltage = push (Volts); current = flow (Amperes); resistance = opposition (Ohms). |
+| Ohm’s Law | V = I × R; to find **V** use V = I × R; to find **I** use I = V ÷ R; to find **R** use R = V ÷ I. |
+| Ohm (Ω) | Unit of resistance; 1 Ω means 1 V produces 1 A through that resistance. |
 
 ---
 

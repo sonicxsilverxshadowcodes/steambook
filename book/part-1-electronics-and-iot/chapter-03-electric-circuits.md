@@ -6,6 +6,17 @@
 
 ## What Is an Electric Circuit?
 
+**Figure 3.1 – Closed vs open circuit:** Current flows only when the path is complete.
+
+```mermaid
+flowchart LR
+    A[Circuit] --> B{Path complete?}
+    B -->|Yes - closed| C[Current flows]
+    B -->|No - open| D[No current]
+    C --> E[Bulb glows, motor runs]
+    D --> F[Bulb off]
+```
+
 An **electric circuit** is a **complete, closed path** through which electricity can flow. Imagine a circular track: if the track is broken somewhere, a toy car cannot go around. Similarly, if a circuit is **open** (broken)—for example, a switch is off or a wire is disconnected—electrons cannot flow and there is **no current**. When the path is **closed** (complete), electrons flow from the negative side of the battery toward the positive side, and the bulb glows, the motor runs, or the buzzer sounds.
 
 | Term | Meaning |
@@ -20,6 +31,15 @@ An **electric circuit** is a **complete, closed path** through which electricity
 ---
 
 ## Parts of a Simple Circuit
+
+**Figure 3.2 – Parts of a simple circuit (line diagram):** Battery → wire → load → wire → back to battery.
+
+```
+    +  [Battery]  -         wire          [Bulb/LED]         wire
+    |============|  ---------------  |~~~~~~~~~~~~~|  ---------------
+         (1)              (2)              (3)                (2)
+    Power source      Path for current    Load            Path back
+```
 
 Every simple circuit has at least three types of parts:
 
@@ -38,6 +58,14 @@ Every simple circuit has at least three types of parts:
 ---
 
 ## Direction of Current
+
+**Figure 3.3 – Conventional current vs electron flow:** We usually draw current from + to −; electrons actually move − to +.
+
+```
+    CONVENTIONAL (what we draw):     ELECTRONS (what actually moves):
+    + -------- current ------> -    - -------- electrons ------> +
+    [Battery]                        [Battery]
+```
 
 We often say that current flows from the **positive** terminal of the battery to the **negative** terminal. This is called **conventional current** direction. In reality, **electrons** (negative particles) move from **negative** to **positive**. Scientists kept the “positive to negative” idea from history, and it still works for designing circuits. So in diagrams, we usually show current going from **+** to **−**.
 
