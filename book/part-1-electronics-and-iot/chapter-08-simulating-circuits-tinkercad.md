@@ -6,6 +6,25 @@
 
 ## What Is Simulation?
 
+**Figure 8.1 – Real circuit vs simulation (Mermaid):** Same logic; simulation is virtual and safe.
+
+```mermaid
+flowchart LR
+    subgraph REAL[" Real "]
+        R1["Battery, wires, LED"]
+        R2["Build on breadboard"]
+        R3["Risk: burn, shock"]
+        R1 --> R2 --> R3
+    end
+    subgraph SIM[" Simulation "]
+        S1["Virtual components"]
+        S2["Build on screen"]
+        S3["No risk"]
+        S1 --> S2 --> S3
+    end
+    REAL -.->|"same rules"| SIM
+```
+
 **Simulation** means testing something on a **computer** instead of in the real world. For circuits, we build the circuit on the screen using virtual batteries, wires, resistors, LEDs, and other parts. The computer **calculates** how current would flow and shows us the result—for example, whether the LED would glow, how bright it would be, or what the voltage and current are. So we can **try ideas without using real parts** and without risk of burning components, short circuits, or electric shock. Simulation is like a “practice ground” for circuits.
 
 | Term | Meaning |
@@ -49,6 +68,18 @@ You can add:
 - **Microcontrollers:** Arduino (simple programs) for interactive circuits
 
 You **connect** them by clicking on terminals and drawing wires. Then you press **Start Simulation**. The program shows current flow (often with small moving dots), glowing LEDs, and you can open the multimeter to see voltage and current. When you are done, you press **Stop Simulation**.
+
+**Flowchart 8.1 – Using Tinkercad Circuits (Mermaid):** From design to result.
+
+```mermaid
+flowchart TD
+    A[Open Tinkercad Circuits] --> B[Drag components]
+    B --> C[Connect with wires]
+    C --> D[Set values: V, R]
+    D --> E[Start Simulation]
+    E --> F[Observe: LED, multimeter]
+    F --> G[Change & run again]
+```
 
 | Step | What you do |
 |------|-------------|

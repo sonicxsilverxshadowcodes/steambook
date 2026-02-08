@@ -6,6 +6,25 @@
 
 ## What Is a Canvas?
 
+**Figure 13.1 – Canvas in a drawing app (Mermaid):** User draws on canvas; we control colour, width, clear.
+
+```mermaid
+flowchart LR
+    subgraph CANVAS[" Canvas "]
+        D["Draw / scribble / paint"]
+    end
+    subgraph CONTROLS[" We can set "]
+        C1["Colour"]
+        C2["Width"]
+        C3["Touch Drawing = true"]
+    end
+    subgraph ACTION[" Action "]
+        CL["Clear drawing block"]
+    end
+    CONTROLS --> CANVAS
+    CANVAS --> CL
+```
+
 A **canvas** is a **space** on the screen where the user can **draw**, **scribble**, or **paint** using a finger (on touch devices) or a mouse (on computers). In app builders like Thunkable, the Canvas is a component you place on the screen; it has a width and height and can detect touches and drags. So a canvas is the “drawing area” inside your app—like a sheet of paper or a whiteboard. Everything the user draws appears on that canvas until we clear it or draw something new.
 
 | Term | Meaning |

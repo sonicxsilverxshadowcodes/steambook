@@ -6,6 +6,20 @@
 
 ## What Is DC?
 
+**Figure 9.1 – DC vs AC (Mermaid):** Direction of current over time.
+
+```mermaid
+flowchart LR
+    subgraph DC[" DC - one direction "]
+        D1["+ ----current----> -"]
+        D2["Constant direction"]
+    end
+    subgraph AC[" AC - reverses "]
+        A1["+ <--> -"]
+        A2["Direction changes 50/60 times per second"]
+    end
+```
+
 **DC** stands for **Direct Current**. In DC, the electric current flows in **one direction** only—like water flowing in one direction through a pipe. The voltage (push) also stays in one direction: positive stays positive and negative stays negative. Batteries, cells, and most phone chargers (at the output) give **DC**. That is why we talk about the “positive” and “negative” terminals of a battery; they do not swap.
 
 | Feature | DC (Direct Current) |
@@ -50,6 +64,17 @@
 ---
 
 ## Waveforms
+
+**Figure 9.2 – Common waveforms (Mermaid):** Sine (AC), square, triangle.
+
+```mermaid
+flowchart LR
+    subgraph WAVES[" Waveform types "]
+        S["Sine wave<br/>AC mains"]
+        Q["Square wave<br/>Digital on/off"]
+        T["Triangle wave<br/>Ramp"]
+    end
+```
 
 We can draw **voltage or current over time** as a **waveform** (a graph). The shape of this graph tells us what kind of supply or signal we have.
 

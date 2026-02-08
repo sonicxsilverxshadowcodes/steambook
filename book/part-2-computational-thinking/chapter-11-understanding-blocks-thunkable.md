@@ -6,6 +6,22 @@
 
 ## What Are Blocks?
 
+**Figure 11.1 – Block types and what they do (Mermaid):** Four main families of blocks.
+
+```mermaid
+flowchart TD
+    subgraph BLOCKS[" Block types "]
+        M["Math: + − × ÷"]
+        L["Logic: if-then, conditions"]
+        C["Control: when, repeat, wait"]
+        T["Text: join, length, input"]
+    end
+    subgraph VAR[" Variables "]
+        V["Store & change values"]
+    end
+    BLOCKS --> VAR
+```
+
 In block-based coding (e.g. Thunkable), **blocks** are small pieces that represent **instructions**. Each block tells the app to do one thing: show a message, change a number, repeat an action, or make a decision. When you **snap blocks together**, you are building a **sequence of instructions** that the app will run. So blocks are like sentences in a recipe: “When the user taps the button, set the label text to ‘Hello!’” is done by connecting a “when Button Click” block with a “set Label text to” block.
 
 | Idea | Meaning |
@@ -13,6 +29,15 @@ In block-based coding (e.g. Thunkable), **blocks** are small pieces that represe
 | **Block** | One instruction (e.g. show text, set variable, repeat) |
 | **Snap together** | Order and connect blocks so they run in sequence or inside an event |
 | **Program** | The full set of blocks that define what the app does |
+
+**Flowchart 11.1 – Building a program with blocks (Mermaid):** Snap blocks → sequence runs top to bottom.
+
+```mermaid
+flowchart LR
+    A["when Button Click"] --> B["set variable"]
+    B --> C["set Label text"]
+    C --> D["Result on screen"]
+```
 
 **Real-life link:** Like following steps to make a sandwich—first take bread, then add butter, then add filling. Blocks are those steps; the order and choice of steps decide the result.
 

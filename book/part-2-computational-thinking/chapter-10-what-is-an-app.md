@@ -6,6 +6,25 @@
 
 ## What Is an App?
 
+**Figure 10.1 – From idea to app (Mermaid):** App is software that runs on hardware to do a specific job.
+
+```mermaid
+flowchart LR
+    subgraph DEVICE[" Device (hardware) "]
+        H["Phone / Tablet"]
+    end
+    subgraph APP[" App (software) "]
+        A["Program<br/>specific job"]
+    end
+    subgraph EXAMPLES[" Examples "]
+        E1["Calculator"]
+        E2["Game"]
+        E3["Drawing"]
+    end
+    H --> A
+    A --> E1 & E2 & E3
+```
+
 An **app** (short for **application**) is a **computer program** that is made to do a **specific job**. When you open an app on your phone, tablet, or computer, it runs a set of instructions that someone (a programmer or a team) wrote. Those instructions tell the device what to show on the screen, what to do when you tap a button, and how to save or use data. So an app is not the phone itself—it is the **software** that runs on the phone and does a particular task for you.
 
 | Term | Meaning |
@@ -25,6 +44,17 @@ An **app** (short for **application**) is a **computer program** that is made to
 So different apps do different jobs, but they all are **programs** made to do something specific.
 
 ---
+
+**Flowchart 10.1 – Native app: from store to your phone (Mermaid):** Download → install → runs on device.
+
+```mermaid
+flowchart TD
+    A[App Store / Play Store] --> B[Download]
+    B --> C[Install on device]
+    C --> D[Icon on screen]
+    D --> E[Tap to open]
+    E --> F[Runs on device - no browser needed]
+```
 
 ## What Is a Native App?
 

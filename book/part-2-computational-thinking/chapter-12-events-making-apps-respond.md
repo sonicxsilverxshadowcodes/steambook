@@ -6,6 +6,22 @@
 
 ## What Is an Event?
 
+**Figure 12.1 – Event → handler → result (Mermaid):** Something happens, then our blocks run.
+
+```mermaid
+flowchart LR
+    subgraph TRIGGER[" Trigger "]
+        E["Button clicked / Screen opens / Slider moved"]
+    end
+    subgraph HANDLER[" Handler "]
+        H["Our blocks run"]
+    end
+    subgraph RESULT[" Result "]
+        R["Message, sound, new screen"]
+    end
+    E --> H --> R
+```
+
 An **event** is **something that happens** in the app (or in the world that the app can detect). When that thing happens, we can tell the app to **run a set of blocks**. So events are the “triggers” that make the app respond: “When this happens, do that.” Without events, the app would not know *when* to show a message, play a sound, or change the screen. Events connect **user actions** or **system actions** to **our code**.
 
 | Term | Meaning |
@@ -23,6 +39,17 @@ An **event** is **something that happens** in the app (or in the world that the 
 ---
 
 ## Button Click Event
+
+**Flowchart 12.1 – When does the app respond? (Mermaid):** No event = no response; event = run handler.
+
+```mermaid
+flowchart TD
+    A[User does something?] --> B{Tap / type / slide?}
+    B -->|No| C[App waits]
+    B -->|Yes| D[Event fires]
+    D --> E[Handler blocks run]
+    E --> F[Screen / sound updates]
+```
 
 If you want something to happen **only when the user taps a button**, you use a **when Button Click** (or “when ButtonName Click”) block. You then attach all the blocks that should run when that button is tapped. For example:
 

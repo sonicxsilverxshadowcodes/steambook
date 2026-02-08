@@ -6,6 +6,22 @@
 
 ## What Is a Slider?
 
+**Figure 14.1 – Slider and when it runs code (Mermaid):** User moves slider → value changes → on Value Change runs.
+
+```mermaid
+flowchart LR
+    subgraph USER[" User "]
+        U["Moves slider"]
+    end
+    subgraph EVENT[" Event "]
+        E["on Value Change"]
+    end
+    subgraph USE[" Use value for "]
+        V["Brush size / width"]
+    end
+    U --> E --> V
+```
+
 A **slider** is a **control** that lets the user **change a value by sliding**—usually by dragging a thumb or knob along a track. The value is often a number between a **minimum** and a **maximum** (e.g. 0 to 100). Sliders are used for things like volume, brightness, size, or speed when we want a **continuous** change rather than just on/off. In block-based apps (e.g. Thunkable), we add a Slider component to the screen; the user moves it, and we can read its value and use it in our blocks (e.g. set drawing width or volume).
 
 | Term | Meaning |

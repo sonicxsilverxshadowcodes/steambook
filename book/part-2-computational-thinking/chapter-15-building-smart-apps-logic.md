@@ -6,6 +6,18 @@
 
 ## Age Calculator App – Why Age Matters
 
+**Figure 15.1 – Smart app flow (Mermaid):** Input → calculate → show (label / TTS) or show error.
+
+```mermaid
+flowchart TD
+    A[User enters birth year] --> B{Valid input?}
+    B -->|No| C[Show error: Alert or label]
+    B -->|Yes| D[Calculate age]
+    D --> E[Show in Label]
+    E --> F[Optional: Text-to-Speech]
+    C --> G[Clear input for retry]
+```
+
 An **Age Calculator** app might ask for the user’s **birth year** (or full date) and then **calculate** their age. Age is important in real life because it:
 
 - **Decides eligibility** — e.g. voting, driving, opening a bank account, watching certain content.

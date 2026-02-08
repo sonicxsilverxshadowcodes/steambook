@@ -6,6 +6,21 @@
 
 ## Why Are There Colors on Resistors?
 
+**Figure 6.1 – Four-band resistor (Mermaid):** Order of bands and what each band means.
+
+```mermaid
+flowchart LR
+    subgraph BANDS[" 4-band resistor (read left to right) "]
+        B1["1st: Digit"]
+        B2["2nd: Digit"]
+        B3["3rd: Multiplier"]
+        B4["4th: Tolerance"]
+        B1 --> B2 --> B3 --> B4
+    end
+    B1 -.-> V["Value = (1st)(2nd) × multiplier Ω"]
+    B4 -.-> T["e.g. ±5%"]
+```
+
 Resistors are often small—smaller than a grain of rice in many circuits. Writing numbers on them would be hard to read. So instead, **coloured bands** are painted on the resistor. Each colour stands for a number or a multiplier. By reading the bands in order, we can find the **resistance value** and the **tolerance** (how much the real value may differ from the marked value). This system is used all over the world, so anyone can read a resistor even if they do not speak the same language.
 
 | Reason | Explanation |
@@ -58,6 +73,17 @@ Memorise this table (or keep it handy). The same colours are used for digits and
 ---
 
 ## Examples of Reading Resistor Values
+
+**Flowchart 6.1 – How to read a 4-band resistor (Mermaid):** Steps to get value and tolerance.
+
+```mermaid
+flowchart TD
+    A[Start at end opposite to gold/silver] --> B[1st band = first digit]
+    B --> C[2nd band = second digit]
+    C --> D[3rd band = multiplier]
+    D --> E[Value = digit1 digit2 × multiplier]
+    E --> F[4th band = tolerance %]
+```
 
 **Example 1:** Bands are **Orange, Orange, Brown, Gold**
 

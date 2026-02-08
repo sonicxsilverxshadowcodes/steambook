@@ -44,6 +44,22 @@ So we always connect a **resistor in series** with an LED. The resistor “uses 
 |------------------|----------------|
 | Too much current → LED can burn | Current limited → LED glows safely for a long time |
 
+**Figure 4.2 – Battery + resistor + LED (voltage and current):** Resistor drops voltage so the LED gets safe current.
+
+```mermaid
+flowchart LR
+    subgraph VDROP[" Voltage: V_battery = V_resistor + V_LED "]
+        VB["Battery 9V"]
+        VR["Resistor 7V"]
+        VL["LED 2V"]
+        VB --> VR --> VL
+    end
+    subgraph CURRENT[" Current: same I through all "]
+        I["I = 0.02 A everywhere in series"]
+    end
+    VDROP --> CURRENT
+```
+
 **Real-life examples:**
 
 - **LED torch or toy:** There is a small resistor inside (or in the circuit) so the LED does not burn out.

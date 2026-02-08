@@ -6,6 +6,23 @@
 
 ## What Is a Breadboard?
 
+**Figure 7.1 – Breadboard layout (Mermaid):** Power strips on sides; rows of 5 connected in the middle.
+
+```mermaid
+flowchart TB
+    subgraph STRIPS[" Side strips "]
+        P["+ (red) - power"]
+        N["− (blue) - ground"]
+    end
+    subgraph ROWS[" Middle: rows of 5 holes "]
+        R1["Row A: 5 holes connected"]
+        R2["Row B: 5 holes connected"]
+        R3["Row C: 5 holes connected"]
+    end
+    P --> R1
+    R1 --> R2 --> R3 --> N
+```
+
 A **breadboard** is a plastic board with many small holes in it. Inside, the holes are connected by metal strips so that when you push a wire or a component leg into a hole, it makes electrical contact with other holes on the same strip. We use breadboards to build **temporary circuits** **without soldering**. You can plug and unplug parts, change connections, and try different ideas quickly. Once the circuit works, we can later solder it onto a permanent board if we want. The name “breadboard” comes from the old days when people sometimes used a wooden board (like a bread-cutting board) to hold their circuits.
 
 | Feature | Why it is useful |
@@ -39,6 +56,19 @@ A typical breadboard has:
 ## Building a Simple LED Circuit on a Breadboard
 
 A simple circuit: **Battery → Resistor → LED → back to battery.**
+
+**Figure 7.2 – LED circuit on breadboard (Mermaid):** Current path from + strip to − strip.
+
+```mermaid
+flowchart LR
+    subgraph PATH[" Current path "]
+        PLUS["+ strip"] --> R["Resistor"]
+        R --> LED["LED long→short"]
+        LED --> W["Wire"]
+        W --> MINUS["− strip"]
+        MINUS --> PLUS
+    end
+```
 
 1. **Place the battery:** Connect battery positive to one hole in the **+** strip and negative to a hole in the **−** strip (or use a battery holder and connect its wires to the strips).
 2. **Place the resistor:** One leg in a hole connected to the + strip (or in a row that you will connect to +). The other leg in a hole in a **middle row** (Row A).

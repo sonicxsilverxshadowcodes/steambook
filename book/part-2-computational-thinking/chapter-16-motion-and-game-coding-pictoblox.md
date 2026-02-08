@@ -6,6 +6,22 @@
 
 ## What Is the X-Axis?
 
+**Figure 16.1 – Motion: x and y (Mermaid):** X = left–right; Y = up–down; “change x by” moves the sprite.
+
+```mermaid
+flowchart LR
+    subgraph AXES[" Axes "]
+        X["X-axis: left ↔ right"]
+        Y["Y-axis: up ↔ down"]
+    end
+    subgraph MOTION[" Motion blocks "]
+        MX["change x by 3 → right"]
+        MY["change y by 3 → up"]
+    end
+    X --> MX
+    Y --> MY
+```
+
 In games and animations we often move characters or objects on the **stage** (the screen). To describe **position** we use **coordinates**. The **x-axis** is the **horizontal** line: it goes **left and right**. Usually:
 
 - **x = 0** is at the centre or at the left edge (depending on the tool).
