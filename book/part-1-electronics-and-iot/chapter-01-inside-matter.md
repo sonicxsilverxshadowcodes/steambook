@@ -29,21 +29,18 @@ Look around you. Your desk, your pencil, the wire of a charger, the screen you a
 
 ## Inside an Atom
 
-**Figure 1.2 – Structure of an atom (simplified):** The nucleus has protons and neutrons; electrons move around it.
+**Figure 1.2 – Structure of an atom (Mermaid):** The nucleus (centre) contains protons and neutrons; electrons are outside and can move (their flow is electricity).
 
-```
-                    electrons (negative)
-                         •
-                    •         •
-                         •
-              +++++++++++++++++++
-              +  NUCLEUS        +
-              +  protons (+)    +
-              +  neutrons (0)   +
-              +++++++++++++++++++
-                         •
-                    •         •
-                         •
+```mermaid
+flowchart TD
+    subgraph OUTSIDE[" Outside the nucleus "]
+        E["Electrons (−)<br/>Negative charge<br/>Move around nucleus<br/>Flow of electrons = electricity"]
+    end
+    subgraph NUCLEUS[" Nucleus (centre) "]
+        P["Protons (+)<br/>Positive charge"]
+        N["Neutrons (0)<br/>No charge"]
+    end
+    E -.->|"orbit / move around"| NUCLEUS
 ```
 
 An atom is like a tiny solar system. In the centre there is a **nucleus** (like the Sun), and around it there are even smaller particles. The three main parts you need to know are:
@@ -80,19 +77,24 @@ Electricity is **not** a thing you can hold. It is the **flow of electrons** fro
 | Electric current | The amount of charge (electrons) passing a point per second; measured in Amperes (A). |
 | No flow | If the path is broken (open circuit), electrons cannot flow, so there is no electricity. |
 
-**Figure 1.5 – Simple circuit (closed vs open):** When the path is complete, current flows; when it is broken, current stops.
+**Figure 1.5 – Closed circuit vs open circuit (Mermaid):** When the path is complete, current flows and the bulb glows; when it is broken, no current and the bulb stays off.
 
+```mermaid
+flowchart LR
+    subgraph CLOSED[" Closed circuit – path complete "]
+        direction LR
+        A1["🔋 Battery"] --> B1["Wire"] --> C1["💡 Bulb"] --> D1["Wire"] --> A1
+    end
 ```
-  CLOSED CIRCUIT (current flows)          OPEN CIRCUIT (no current)
-  --------------------------------        -------------------------------
-       +  [Battery]  -                          +  [Battery]  -
-       |      |      |                          |      |      |
-       +------+------+                          +      X      -
-       |   Wire     |                          |   (break)   |
-       +------+------+                          +-------------+
-       |   Bulb     |                                 
-       +------+------+                          Bulb does NOT glow
-       Electrons flow → Bulb glows
+*Current flows; bulb glows.*
+
+```mermaid
+flowchart LR
+    subgraph OPEN[" Open circuit – path broken "]
+        direction LR
+        A2["🔋 Battery"] --> B2["Wire"] --> X["✗ Break<br/>e.g. switch off"]
+        X -.->|"No path<br/>No current"| C2["💡 Bulb off"]
+    end
 ```
 
 **Real-life examples:**
