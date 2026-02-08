@@ -19,9 +19,11 @@ Look around you. Your desk, your pencil, the wire of a charger, the screen you a
 
 | Idea | Simple explanation |
 |------|---------------------|
-| Atom | The smallest unit of ordinary matter that still has the properties of an element (e.g. copper, carbon). |
+| Atom | The smallest **piece** of an element that still **is** that element (e.g. one copper atom is still copper; one carbon atom is still carbon). |
 | Matter | Anything that has mass and takes up space (solids, liquids, gases). |
 | Element | A pure substance made of only one type of atom (e.g. gold, oxygen, silicon). |
+
+**Clearing a common doubt:** Yes, **electrons** (and protons, neutrons) are **smaller in size** than an atom—they are the *parts inside* the atom. But we call the **atom** the “smallest unit” of an element because it is the **smallest piece that still has the identity of that element**. One electron by itself is not “copper” or “carbon”—it is just an electron. If you break an atom into its electrons, protons, and neutrons, you no longer have copper or carbon; you have subatomic particles. So: **smallest in size** = electron (and other particles) are smaller; **smallest that is still the element** = atom.
 
 **Real-life link:** When you touch a metal railing, you are touching trillions of atoms. When you switch on a light, electrons (tiny parts of atoms) move through the wire and make the bulb glow. So electricity is connected to the same “stuff” that everything is made of—atoms.
 
